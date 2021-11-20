@@ -71,6 +71,10 @@ html{
     line-height: 70px;
     cursor: pointer;
 }
+
+.nav.active{
+    left: 0;
+}
 .nav-list{
     display: flex;
     list-style: none;
@@ -87,6 +91,7 @@ html{
 }
 .nav-item-dropdown:hover .dropdown-content{
     display: block;
+    animation: show ease-in .3s;
 }
 .nav-item-dropdown{
     position: relative;
@@ -302,6 +307,14 @@ html{
 
 
 @media (max-width: 767px){
+    .row{
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+    .btn-navbar{
+        display: block;
+        padding-left: 20px;
+    }
     .header-logo{
         width: auto;
         height: 48px;
@@ -336,12 +349,43 @@ html{
         top: 150px;
         right: 110px;
     }
+    .nav{
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: -120%;
+        right: 0;
+        width: 100%;
+        background-color: #eee;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        /* display: none; */
+    }
+    .nav-list{
+        display: block;
+        
+    }
+    .nav-item{
+        width: 100%;
+        font-size: 14px;
+        background-color: #fff;
+        /* border: 1px solid #ccc; */
+        border-radius: 3px;
+        padding: 12px;
+        text-align: center;
+    }
+    .nav-item-link{
+        width: 100%;
+    }
 }
 
 
 
 
 @media (min-width: 768px) and (max-width: 1023px) {
+    .btn-navbar{
+        display: block;
+        padding-left: 20px;
+    }
     
     .header-logo{
         width: auto;
@@ -368,22 +412,39 @@ html{
         top: 94px;
         right: 42px;
     }
-}
-
-
-
-
-@media (max-width: 1023px){
-    .nav{
-        display: none;
-
-    }
-    .btn-navbar{
-        display: block;
-        padding-left: 20px;
-    }
     .row{
         margin-left: 15px;
         margin-right: 15px;
     }
+    .btn-navbar{
+            display: block;
+            padding-left: 20px;
+        }
+        .nav{
+            display: block;
+            position: absolute;
+            top: 100%;
+            left: -120%;
+            right: 0;
+            width: 100%;
+            background-color: #eee;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+            /* display: none; */
+        }
+        .nav-list{
+            display: block;
+            
+        }
+        .nav-item{
+            width: 100%;
+            font-size: 14px;
+            background-color: #fff;
+            /* border: 1px solid #ccc; */
+            border-radius: 3px;
+            padding: 12px;
+            text-align: center;
+        }
+        .nav-item-link{
+            width: 100%;
+        }
 }
